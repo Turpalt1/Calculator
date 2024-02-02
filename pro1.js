@@ -53,6 +53,12 @@ function btnSecond(e){
             calc(input);
     
             console.log(input.value.indexOf("+"))
+        }else if(e.target.value == ' - '||e.target.value == ' * '||e.target.value == ' + '||e.target.value == ' / '){
+            if(input.value.includes(' - ')||input.value.includes(' * ')||input.value.includes(' + ')||input.value.includes(' / ')){
+                return;
+            }else{
+                input.value += e.target.value;    
+            }
         }else{
             input.value += e.target.value 
         }
